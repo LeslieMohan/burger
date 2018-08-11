@@ -7,13 +7,13 @@ var burger = {
       cb(res);
     });
   },
-  create: function(columnNames, columnValues, cb) {
-    orm.create('burgers', columnNames, columnValues, function(res) {
+  insertOne: function(columnNames, columnValues, cb) {
+    orm.insertOne('burgers', columnNames, columnValues, function(res) {
       cb(res);
     });
   },
-  update: function(objectColumnValues, condition, cb) {
-    orm.update('burgers', objectColumnValues, condition, function(res) {
+  updateOne: function(objectColumnValues, condition, cb) {
+    orm.updateOne('burgers', objectColumnValues, condition, function(res) {
       cb(res);
     });
   },

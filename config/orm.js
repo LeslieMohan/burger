@@ -26,7 +26,7 @@ var connection = require("./connection.js");
       if (typeof value === "string" && value.indexOf(" ") >= 0) {
         value = `'${value}'`;
       }
-      arr.push(`{key}=${value}`);
+      arr.push(`${key}=${value}`);
     }
   }
 
@@ -42,7 +42,8 @@ var orm = {
       cb(res);
     });
   },
-  create: function(tableName, columnNames, columnValues, cb) {
+
+  insertOne: function(tableName, columnNames, columnValues, cb) {
     var columnNameString = columnNames.toString();
     var questionMarks = printQuestionMarks(columnValues.length);
     var queryString = `INSERT INTO ${tableName} (${columnNameString}) VALUES (${questionMarks});`;
@@ -52,7 +53,8 @@ var orm = {
       cb(result);
     });
   },
-  update: function(tableName, objectColumnValues, condition, cb) {
+
+  updateOne: function(tableName, objectColumnValues, condition, cb) {
     var objectToSQL = objToSql(objectColumnValues);
     var queryString = `UPDATE ${tableName} SET ${objectToSQL} WHERE ${condition};`;
     console.log(queryString);
@@ -61,6 +63,7 @@ var orm = {
       cb(result);
     });
   },
+
   delete: function(tableName, condition, cb) {
     var queryString = `DELETE FROM ${tableName} WHERE ${condition};`;
     connection.query(queryString, function(err, result) {

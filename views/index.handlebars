@@ -30,11 +30,12 @@
         {{#if devoured}}
           <div class="burgerBox">
             
-            {{burger_name}}
-
             <button class="devourUndevour undevour" data-id="{{id}}" data-devoured="{{devoured}}">Un-devour?</button>
 
+            {{burger_name}}
+
             <button class="deleteBurger" data-id="{{this.id}}">X</button>
+            
           </div>
         {{/if}}
       {{/each}}
@@ -50,8 +51,8 @@
         <label for="burger_name">Burger Name:</label>
         <input type="text" id="burger_name" name="burger_name">
         <br>
-        <input type="radio" name="devoured" value="1"> Devoured!
         <input type="radio" name="devoured" value="0" checked> Not Devoured!
+        <input type="radio" name="devoured" value="1"> Devoured!
       </div>
 
       <button id="burgerButton" type="submit">Add Burger</button>
