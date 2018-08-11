@@ -1,20 +1,21 @@
 <div class="container">
   <div class="header">
-    <img class="burgerImage" src="assets/img/.png">
-    <h1 id="pageTitle">Burgers!</h1>
-    <img class="burgerImage" src="assets/img/.png">
+    
+    <h1 id="pageTitle">Burgers! Burgers! Burgers!</h1>
+    
   </div>
 
   <div class="row">
     <div class="box">
-      <h2 class="boxCaption">Not yet devoured:</h2>
+      <h2 class="boxTitle">Not devoured:</h2>
       <hr>
       {{#each burgers}}
         {{#unless devoured}}
           <div class="burgerBox">
-            <img class="burgerImage" src="assets/img/.png">
+            <button class="devourUndevour devour" data-id="{{id}}" data-devoured="{{devoured}}">Devour it!</button>
+
             {{burger_name}}
-            <button class="devourUndevour devour" data-id="{{id}}" data-devoured="{{devoured}}">Devour!</button>
+            
             <button class="deleteBurger" data-id="{{this.id}}">X</button>
 
           </div>
@@ -23,14 +24,16 @@
     </div>
 
     <div class="box">
-      <h2 class="boxCaption">Devoured:</h2>
+      <h2 class="boxTitle">Devoured:</h2>
       <hr>
       {{#each burgers}}
         {{#if devoured}}
           <div class="burgerBox">
-            <img class="burgerImage" src="assets/img/burger.png">
+            
             {{burger_name}}
+
             <button class="devourUndevour undevour" data-id="{{id}}" data-devoured="{{devoured}}">Un-devour?</button>
+
             <button class="deleteBurger" data-id="{{this.id}}">X</button>
           </div>
         {{/if}}
@@ -39,7 +42,7 @@
   </div>
 
   <div id="addBurger">
-    <h2 class="boxCaption">Add a Burger</h2>
+    <h2 class="boxTitle">Add a Burger</h2>
     <hr>
     <form class="burgerForm">
 

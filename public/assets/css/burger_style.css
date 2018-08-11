@@ -1,10 +1,145 @@
 body {
-    background-image: url("../img/3burgers.jpg");
+    background-image: url("../images/3burgers.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     font-family: '', sans-serif;
+    background-position: center;
 }
 
 .container {
-    
+    width: 80%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    position: relative;
 }
+
+#pageTitle {
+    text-align: center;
+    display: inline;
+    text-shadow: 0 0 15px #ffffff;
+    font-size: 40px;
+}
+
+  .header {
+    width: 99%;
+    padding: 1%;
+    margin: 1%;
+    border-bottom: 1px solid #dddddd;
+    text-align: center;
+    background-color: transparent;
+    
+  }
+
+  /*hr {
+    border:none;
+    width: 90%;
+    height: 50px;
+    margin-top: 0;
+    border-bottom: 1px solid #1f1209;
+    box-shadow: 0 20px 20px -20px lightgrey;
+    margin: -50px auto 10px;
+  }*/
+
+  .row {
+    width: 99%;
+    position: relative;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+  }
+
+  .box {
+    width: 40%;
+    /*float: left;*/
+    padding: 1%;
+    margin: 1%;
+    margin-right: 1%;
+    margin-bottom: 20px;
+    margin-left: 1%;
+    border-radius: 3px;
+    background-color: transparent;
+    display: inline-block;
+  }
+  
+  .boxTitle {
+    margin: 5px 0;
+    text-align: center;
+    color: black;
+    
+    /*text-shadow:
+    -1px -1px 0 white,
+    1px -1px 0 white,
+    -1px 1px 0 white,
+    1px 1px 0 white;*/
+    
+    text-shadow: 0 0 15px white;
+  }
+
+  .burgerBox {
+    padding: 2%;
+    margin: 2%;
+    border-bottom: 1px solid #aaaaaa;
+    position: relative;
+    background-color: transparent;
+    color: white;
+  }
+
+  .deleteBurger {
+    border: none;
+    position: absolute;
+    right: .5px;
+    top: 12px;
+    background-color: transparent;
+    color: red;
+    font-weight: bold;
+  }
+
+
+  .devourUndevour {
+    border: 1px solid darkgray;
+    color: darkgray;
+    padding: 5px 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 3px;
+    background-color: transparent;
+  }
+
+  .devourUndevour:hover {
+    border: 1px solid red;
+  }
+
+  #addBurger {
+    clear: both;
+    width: 99%;
+    padding: 1%;
+    margin:   1%;
+    text-align: center;
+    background-color: transparent;
+  }
+
+  #burger_name {
+    width: 40%;
+    max-width: 350px;
+    background-color: lightgray;
+  }
+  
+  #burgerButton {
+    background-color: red;
+    margin: 10px 0;
+    border: 1px solid red;
+    color: white;
+    padding: 5px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 3px;
+  }
+
+  #burgerButton:hover {
+    background-color:transparent;
+    border: 1px solid red; 
+  }
