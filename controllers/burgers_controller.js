@@ -9,11 +9,14 @@ var burger = require('../models/burger.js');
 //create routes
 router.get('/', function(req, res) {
   burger.selectAll(function(data) {
-    var hbsObject = { burgers: data };
+    var hbsObject = {
+      burgers: data 
+    };
     console.log(hbsObject);
     res.render("index", hbsObject);
   });
 });
+
 
 router.post('/api/new-burger', function(req, res) {
   burger.insertOne([
@@ -39,6 +42,8 @@ router.put('/api/update-burger/:id', function(req, res) {
     }
   });
 });
+
+
 
 router.delete("/api/delete-burger/:id", function(req, res) {
   var condition = `id = ${req.params.id}`;

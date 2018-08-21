@@ -1,4 +1,4 @@
-// Make sure we wait to attach our handlers until the DOM is fully loaded.
+// attach our handlers when DOM is fully loaded.
 $(function() {
     $(".devourUndevour").on("click", function(event) {
         var clickDevoured = {

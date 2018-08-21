@@ -1,45 +1,43 @@
 // Import MySQL connection.
 var connection = require("./connection.js");
 
-// creates an array of question marks - ["?", "?", "?"] to turn it into a string.
+// create array of question marks - ["?", "?", "?"] to turn it into a string.
 // ["?", "?", "?"].toString() => "?,?,?";
  var printQuestionMarks = function(num) {
-  var arr = [];
+      var arr = [];
 
   for (var i = 0; i < num; i++) {
-    arr.push("?");
+      arr.push("?");
   }
 
   return arr.toString();
 };
 
-// convert object key/value pairs to SQL syntax
- var objToSql = function(object) {
-  var arr = [];
-
-  // loop through the keys and push the key/value as a string int arr
+// loop through the keys and push the key/value as a string int arr
+var objToSql = function(object) {
+      var arr =[];
   for (var key in object) {
-    var value = object[key];
-    
-    if (Object.hasOwnProperty.call(object, key)) {
-      
+  
+      var value = object[key];
+
+  if (Object.hasOwnProperty.call(object, key)) {
+  
       if (typeof value === "string" && value.indexOf(" ") >= 0) {
-        value = `'${value}'`;
+      value = `'${value}'`;
       }
-      arr.push(`${key}=${value}`);
+    arr.push(`${key}=${value}`);
     }
   }
-
-  return arr.toString();
 };
 
-// Object for SQL statement functions.
+// create ORM Object for SQL queries.
 var orm = {
   selectAll: function(tableName, cb) {
-   var queryString = `SELECT * FROM ${tableName};`;
-    connection.query(queryString, function(err, res) {
+      var queryString = `SELECT * FROM ${tableName};`;
+    connection.query(queryString, function(err, result) {
       if (err) throw err;
-      cb(res);
+      //return results callback
+      cb(result);
     });
   },
 
