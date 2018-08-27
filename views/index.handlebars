@@ -1,13 +1,12 @@
 <div class="container">
+
   <div class="header">
-    
     <h1 id="pageTitle">Burgers! Burgers! Burgers!</h1>
-    
   </div>
 
   <div class="row">
     <div class="box">
-      <h2 class="boxTitle">Not devoured:</h2>
+      <h2 class="boxTitle">Ordered:</h2>
       <hr>
       {{#each burgers}}
         {{#unless devoured}}
@@ -24,7 +23,7 @@
     </div>
 
     <div class="box">
-      <h2 class="boxTitle">Devoured:</h2>
+      <h2 class="boxTitle">Delivered:</h2>
       <hr>
       {{#each burgers}}
         {{#if devoured}}
@@ -44,7 +43,7 @@
 
 
   <div id="addBurger">
-    <h2 class="boxTitle">Add a Burger</h2>
+    <h2 class="boxTitle">Order a Burger</h2>
     <hr>
     <form class="burgerForm">
 
@@ -56,7 +55,7 @@
         <input type="radio" name="devoured" value="1"> Devoured!
       </div>
 
-      <button id="burgerButton" type="submit">Add Burger</button>
+      <button id="burgerButton" type="submit">Order Burger</button>
     </form>
   </div>
 </div>
