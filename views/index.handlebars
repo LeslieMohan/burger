@@ -11,7 +11,7 @@
       {{#each burgers}}
         {{#unless devoured}}
           <div class="burgerBox">
-            <button class="devourUndevour devour" data-id="{{id}}" data-devoured="{{devoured}}">Devour it!</button>
+            <button class="devourUndevour devour" data-id="{{id}}" data-devoured="{{devoured}}">Deliver it!</button>
 
             {{burger_name}}
             
@@ -51,8 +51,8 @@
         <label for="burger_name">Burger Name:</label>
         <input type="text" id="burger_name" name="burger_name">
         <br>
-        <input type="radio" name="devoured" value="0" checked> Not Devoured!
-        <input type="radio" name="devoured" value="1"> Devoured!
+        <input type="radio" name="devoured" value="0" checked> Ordered!
+        <input type="radio" name="devoured" value="1"> Delivered!
       </div>
 
       <button id="burgerButton" type="submit">Order Burger</button>

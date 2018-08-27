@@ -30,7 +30,7 @@ $(function() {
         data: {
           
           burger_name: burger_name,
-          devoured: $("[name=devoured]:checked").val().trim()
+          devoured: $("[name=devoured]:checked").val()
         }
       }).then(
         function() {
