@@ -1,6 +1,6 @@
 // attach our handlers when DOM is fully loaded.
 $(function() {
-    $(".devourUndevour").on("click", function(event) {
+    $(".deliverit").on("click", function(event) {
         var clickDevoured = {
           devoured: Math.abs($(this).data("devoured") - 1)
       };

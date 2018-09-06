@@ -78,7 +78,7 @@ body {
   }
 
 
-  .devourUndevour {
+  .deliverit {
     border: 1px solid darkgray;
     color: darkgray;
     padding: 5px 5px;
@@ -90,7 +90,7 @@ body {
     background-color: transparent;
   }
 
-  .devourUndevour:hover {
+  .deliverit:hover {
     border: 1px solid red;
   }
 

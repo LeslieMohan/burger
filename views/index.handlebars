@@ -11,7 +11,7 @@
       {{#each burgers}}
         {{#unless devoured}}
           <div class="burgerBox">
-            <button class="devourUndevour devour" data-id="{{id}}" data-devoured="{{devoured}}">Deliver it!</button>
+            <button class="deliverit devour" data-id="{{id}}" data-devoured="{{devoured}}">Deliver it!</button>
 
             {{burger_name}}
             
@@ -29,7 +29,6 @@
         {{#if devoured}}
           <div class="burgerBox">
             
-            <!--<button class="devourUndevour undevour" data-id="{{id}}" data-devoured="{{devoured}}">Return it?</button>-->
 
             {{burger_name}}
 
